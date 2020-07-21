@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Hangman</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
+  <script defer type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+  <!-- <h1>Simple 'Hangman' Game</h1>
+    <p>[no people will actually be harmed during this game]</p>-->
+  <section id="winlosebackground" class=""></section>
+
+
+  <section id="header">
+    <h1 id="pagetitle">Hangman</h1>
+    <img src="assets/cloud1.png" id="cloud1">
+    <img src="assets/cloud2.png" id="cloud2">
+    <img src="assets/cloud3.png" id="cloud3">
+
+    <div class="win">
+      <h2>You win!</h2>
+    </div>
+    <div class="lose">
+      <h2>You lose!</h2>
+      <p>The chosen word was: <span></span></p>
+    </div>
+  </section>
+  <section id="left">
+
+    <img id="gallows" src="assets/Gallows05.svg" alt="gallows">
+
+  </section>
+
+  <section id="right">
+    <section id="boardcontainer">
+      <section id="board">
+        <h2>Current word:</h2>
+        <div id="currentword" class="the_word">_ _ _ _ _</div>
+        <h3>Incorrectly guessed letters:</h3>
+        <div id="guessedletters" class="guessed_letters"></div>
+      </section>
+    </section>
+    <section id="inputcontainer">
+      <input id="inputfield" type="text" placeholder="Guess a letter" maxlength="1" />
+      <button id="guessbutton" class="guess">Guess</button>
+      <button id="restartbutton" class="restart">Restart</button>
+    </section>
+    <section id="livesleftwrapper">
+      <p class="lives">You have <span id="livesremaining"></span> lives remaining</p>
+    </section>
+
+  </section>
+
+</body>
+
+</html>

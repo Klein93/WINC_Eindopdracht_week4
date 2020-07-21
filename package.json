@@ -1,0 +1,23 @@
+{
+  "name": "feo-finalassignment-4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "dependencies": {
+    "jest": "^26.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BartpK/FEO-FinalAssignment-4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BartpK/FEO-FinalAssignment-4/issues"
+  },
+  "homepage": "https://github.com/BartpK/FEO-FinalAssignment-4#readme"
+}

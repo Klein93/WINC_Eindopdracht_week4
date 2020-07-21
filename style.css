@@ -1,0 +1,189 @@
+* {
+  margin:0;
+  padding:0;
+  color:white;
+  font-family: 'Cardo', serif;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  background: rgb(102,102,102);
+  background: linear-gradient(6deg, rgba(102,102,102,1) 0%, rgba(28,28,28,1) 82%);
+  overflow-x: hidden;
+}
+
+#left{
+grid-row: 2/2;
+grid-column: 1/1;
+}
+
+#right{
+  grid-row: 2/2;
+  grid-column: 2/2;
+}
+
+.lose, .win{
+  display:none;
+  animation: fadein 1s forwards;
+}
+
+#boardcontainer {
+  margin:auto;
+  border:solid 4px white;
+}
+
+#inputcontainer {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 60% 20% 20%;
+}
+
+input, button {
+  padding: 5px 0 5px 0;
+  margin: 0 2px 0 2px;
+}
+
+input {
+  color:black
+}
+
+#gallows {
+  width: 750px;
+  grid-row: 2/2;
+  grid-column: 1/-1;
+  display: block;
+  margin: -50px 0 0 100px;
+  
+}
+button {
+  background: none;
+  border: solid 2px white;
+  transition: 0.4s;
+}
+button:hover {
+  background: white;
+  border:none;
+  color: black;
+}
+
+#board {
+  padding: 50px;
+  text-align: center;
+}
+
+#board div, #board h2, #board h3{
+  margin: 20px;
+}
+
+#right {
+  margin:auto;
+}
+
+#moon {
+  width: 200px;
+  display:none;
+}
+#header {
+  grid-row: 1/1;
+  grid-column: 1/-1;
+  text-align: center;
+  
+}
+
+#pagetitle {
+  font-size: 70px;
+  margin-top: 30px;
+  font-weight: 200;
+}
+
+
+
+#cloud1 {
+  animation: float 32s linear 0s infinite ;
+  opacity: 0.3;
+  margin-top: -300px;
+}
+
+#cloud2 {
+  margin-top: -250px;
+  animation: float 40s linear 0s infinite ;
+  opacity: 0.1;
+}
+
+#cloud3 {
+  width: 500px;
+  margin-top: -100px;
+  animation: float 45s linear 20s infinite ;
+  opacity: 0.2;
+  transform: translate(-1500px)
+}
+
+#victim {
+  grid-row: 2/2;
+  grid-column: 1/1;
+  margin-top: -50000px;
+  margin-left: 300px;
+}
+
+.lostbackground {
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:-1;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	position:absolute;
+	animation:flash 5s linear infinite;
+}
+
+.wonbackground {
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:-1;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	position:absolute;
+	animation:fadeblue 4s linear forwards;
+}
+
+#livesleftwrapper{
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  margin: 20px;
+}
+
+#livesleftwrapper span{
+  font-size: 25px;
+}
+
+@keyframes float {
+  from {
+    transform: translate(-1500px);
+  }
+  to {
+    transform: translate(1500px);
+  }}
+
+  @keyframes flash{ 
+    0%,  95%,  98% {background-color:transparent}
+    96%, 99%, 100% {background-color:#fff} 
+  }
+
+  @keyframes fadeblue{ 
+    from {background-color:transparent}
+    to{background-color:#089aff} 
+  }
+
+  @keyframes fadein{
+    from{opacity: 0}
+    to{opacity:1}
+  }
+  
